@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/white"
+    android:id="@+id/homepage">
+
+    <!-- App Icon and Title -->
+    <ImageView
+        android:id="@+id/appIcon"
+        android:layout_width="120dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginStart="10dp"
+        android:elevation="5dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/hotel_logo"
+        android:visibility="visible" />
+
+    <!-- App Title -->
+    <TextView
+        android:id="@+id/appTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/appIcon"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="-113dp"
+        android:layout_toRightOf="@id/appIcon"
+        android:text="InstaStay"
+        android:textColor="@color/lavender"
+        android:textSize="51sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif"/>
+
+    <EditText
+        android:id="@+id/location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/appTitle"
+        android:layout_marginTop="70dp"
+        android:hint="City, locality, landmark"
+        android:backgroundTint="#E6E6FA"
+        android:background="@android:drawable/editbox_background"/>
+
+    <!-- Check-in & Check-out Date Fields in One Row -->
+    <LinearLayout
+        android:id="@+id/date_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/location"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <EditText
+            android:id="@+id/checkin_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Check-in Date"
+            android:backgroundTint="#E6E6FA"
+            android:background="@android:drawable/editbox_background"
+            android:padding="10dp"
+            android:gravity="center"/>
+
+        <EditText
+            android:id="@+id/checkout_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Check-out Date"
+            android:backgroundTint="#E6E6FA"
+            android:background="@android:drawable/editbox_background"
+            android:padding="10dp"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <!-- Guests and Rooms in the same line -->
+    <LinearLayout
+        android:id="@+id/guests_rooms_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/date_layout"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <EditText
+            android:id="@+id/guests"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Guests"
+            android:backgroundTint="#E6E6FA"
+            android:background="@android:drawable/editbox_background"
+            android:padding="10dp"
+            android:gravity="center"/>
+
+        <EditText
+            android:id="@+id/rooms"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Rooms"
+            android:backgroundTint="#E6E6FA"
+            android:background="@android:drawable/editbox_background"
+            android:padding="10dp"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <!-- Trip Type (Optional) Label -->
+    <TextView
+        android:id="@+id/trip_type_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/guests_rooms_layout"
+        android:layout_marginTop="12dp"
+        android:text="Trip Type (Optional)"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/lavender"/>
+
+    <!-- Trip Type Selection -->
+    <CheckBox
+        android:id="@+id/business"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/trip_type_label"
+        android:text="Business"
+        android:textColor="@color/lavender"
+        android:layout_marginTop="8dp"/>
+
+    <CheckBox
+        android:id="@+id/family"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/trip_type_label"
+        android:layout_toEndOf="@id/business"
+        android:layout_marginStart="16dp"
+        android:text="Family"
+        android:textColor="@color/lavender"
+        android:layout_marginTop="8dp"/>
+
+    <CheckBox
+        android:id="@+id/romantic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/trip_type_label"
+        android:layout_toEndOf="@id/family"
+        android:layout_marginStart="16dp"
+        android:text="Romantic"
+        android:textColor="@color/lavender"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Search Button -->
+    <Button
+        android:id="@+id/search_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Search"
+        android:backgroundTint="@color/lavender"
+        android:textColor="@android:color/white"
+        android:padding="12dp"
+        android:textSize="18dp"
+        android:layout_below="@id/business"
+        android:layout_marginTop="40dp"
+        android:layout_marginHorizontal="10dp"/>
+
+    <TextView
+        android:id="@+id/best_offers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/search_button"
+        android:layout_marginTop="50dp"
+        android:text="🌟 Best Offers For You 🌟"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@color/lavender"
+        android:gravity="center"
+        android:padding="10dp" />
+
+    <TextView
+        android:id="@+id/offer_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/best_offers"
+        android:layout_marginTop="8dp"
+        android:text="✨ 25% OFF on first booking! ✨\nUse Code: WELCOME25"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:padding="12dp"
+        android:background="@color/lavender"/>
+</RelativeLayout>

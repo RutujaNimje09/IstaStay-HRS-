@@ -1,0 +1,196 @@
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- Toolbar -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/blue"
+            app:title="Booking"
+            app:titleTextColor="@android:color/white"/>
+
+        <!-- Hotel Image -->
+        <ImageView
+            android:id="@+id/confirmHotelImage"
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:padding="10dp"
+            android:src="@drawable/room6" />
+
+        <!-- Hotel Name & Location -->
+        <TextView
+            android:id="@+id/confirmHotelName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hotel Name"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:paddingTop="10dp"/>
+
+        <TextView
+            android:id="@+id/confirmHotelLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hotel Location"
+            android:textSize="16sp"
+            android:textColor="@color/darker_gray"/>
+
+        <!-- Booking Details Heading -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Booking Details"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:paddingTop="20dp"/>
+
+        <!-- Booking Details Table -->
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="1"
+            android:padding="8dp">
+
+            <TableRow>
+                <TextView android:text="Check-in:"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:id="@+id/confirmCheckIn"
+                    android:text="--"
+                    android:textSize="16sp"/>
+            </TableRow>
+
+            <TableRow>
+                <TextView android:text="Check-out:"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:id="@+id/confirmCheckOut"
+                    android:text="--"
+                    android:textSize="16sp"/>
+            </TableRow>
+
+            <TableRow>
+                <TextView android:text="Total Nights:"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:id="@+id/confirmTotalNights"
+                    android:text="--"
+                    android:textSize="16sp"/>
+            </TableRow>
+        </TableLayout>
+
+        <!-- Billing Details Heading -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Billing Details"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:paddingTop="20dp"/>
+
+        <!-- Billing Details Table -->
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="1"
+            android:padding="8dp">
+
+            <TableRow>
+                <TextView android:text="Room Charge:"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:id="@+id/billRoomCharge"
+                    android:text="₹0"
+                    android:textSize="16sp"/>
+            </TableRow>
+
+            <TableRow>
+                <TextView android:text="Extra Charges:"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:id="@+id/billExtraCharge"
+                    android:text="₹0"
+                    android:textSize="16sp"/>
+            </TableRow>
+
+            <TableRow>
+                <TextView android:text="Service Tax:"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:id="@+id/billServiceTax"
+                    android:text="₹0"
+                    android:textSize="16sp"/>
+            </TableRow>
+
+            <TableRow>
+                <TextView android:text="Total Payable:"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/holo_red_dark"/>
+                <TextView
+                    android:id="@+id/confirmTotalPrice"
+                    android:text="₹0"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/holo_red_dark"/>
+            </TableRow>
+        </TableLayout>
+
+        <!-- User Details Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your booking details will be sent here"
+            android:textSize="14sp"
+            android:textColor="@color/darker_gray"
+            android:paddingTop="20dp"/>
+
+        <EditText
+            android:id="@+id/full_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Full Name"
+            android:padding="12dp"/>
+
+        <EditText
+            android:id="@+id/phone_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Phone Number"
+            android:inputType="phone"
+            android:padding="12dp"
+            android:layout_marginTop="10dp"/>
+
+        <!-- Pay Button -->
+        <Button
+            android:id="@+id/btnPay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PAY"
+            android:textSize="16sp"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="end"/>
+
+    </LinearLayout>
+</ScrollView>

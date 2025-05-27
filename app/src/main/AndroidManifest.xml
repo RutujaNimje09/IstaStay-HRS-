@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.miniproject">
+
+    <!-- Permissions -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+
+
+    <!-- Deprecated storage permissions removed for Android 10+ -->
+    <!-- <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/> -->
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Mini Project"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MiniProject">
+
+        <!-- Activities -->
+        <activity android:name=".ForgotPassword"
+            android:exported="true" />
+
+        <activity android:name=".HomeActivity"
+            android:exported="true" />
+
+        <activity android:name=".SearchHotel"
+            android:exported="true" />
+
+        <!-- Set LoginActivity as the single launcher -->
+        <activity android:name=".LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".RegisterActivity"
+            android:exported="false" />
+
+        <activity android:name=".MainActivity"
+            android:exported="true" />
+
+        <activity android:name=".Detail"
+            android:exported="false" />
+
+        <activity android:name=".BookingActivity"
+            android:exported="false" />
+
+        <activity android:name=".ConfirmationActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+        <activity android:name=".ReviewPay"
+            android:exported="true" />
+
+        <activity android:name=".Activity2"
+            android:exported="true" />
+
+    </application>
+</manifest>

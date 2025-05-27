@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:orientation="vertical">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue"
+        app:title="Hotel Details"
+        app:titleTextColor="@android:color/white" />
+
+    <!-- Dynamic Image -->
+    <ImageView
+        android:id="@+id/hotelImage"
+        android:layout_width="match_parent"
+        android:layout_height="290dp"
+        android:paddingTop="10dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Hotel Name -->
+            <TextView
+                android:id="@+id/hotelName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black" />
+
+            <!-- Hotel Location & Amenities -->
+            <TextView
+                android:id="@+id/hotelLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="@android:color/black"
+                android:paddingTop="10dp" />
+
+            <!-- Hotel Price -->
+            <TextView
+                android:id="@+id/hotelPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="19sp"
+                android:textColor="@android:color/holo_red_dark"
+                android:paddingTop="10dp" />
+
+            <!-- Hotel Description -->
+            <TextView
+                android:id="@+id/hotelDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:padding="8dp" />
+
+            <!-- WebView for Additional Hotel Details -->
+
+            <!-- Book Room Button -->
+            <WebView
+                android:id="@+id/webView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp" />
+
+            <Button
+                android:id="@+id/book"
+                android:layout_width="200dp"
+                android:layout_height="70dp"
+                android:text="Book Room"
+                android:textSize="20sp"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/blue"
+                android:padding="10dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
